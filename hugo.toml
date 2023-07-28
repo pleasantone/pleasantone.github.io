@@ -1,8 +1,8 @@
 baseURL = "https://pst.org"
 theme   = "sk1"
-title   = "Route Notes"
+title   = "Paul's Route Notes"
 author = "Paul Traina"
-# copyright = "Copyright © 2023, Paul Traina; all rights reserved."
+copyright = "Copyright © 2023, Paul Traina; all rights reserved."
 # paginate = 3
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -12,7 +12,7 @@ enableGitInfo = true
 enableEmoji = true
 
 [permalinks]
-  post = "/post/:year-:month-:slug/"
+  post = "/post/:year-:month-:day-:slug/"
 
 [sitemap]
   changefreq = "hourly"
