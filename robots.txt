@@ -1,0 +1,12 @@
+{{ if .Site.Params.robotsGoAway -}}
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: *
+Disallow: /
+{{ else -}}
+User-agent: *
+Disallow: /404.html
+
+Sitemap: {{ .Sitemap.Filename | default "/sitemap.xml" | absLangURL }}
+{{ end -}}
