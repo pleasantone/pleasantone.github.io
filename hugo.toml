@@ -1,0 +1,17 @@
+baseURL = "https://pst.org"
+theme   = "sk1"
+title   = "Route Notes"
+author = "Paul Traina"
+# copyright = "Copyright © 2023, Paul Traina; all rights reserved."
+# paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+
+[Params]
+mainSections = "post"
+subtitle = "GPS Route Library"
+
+#[markup.tableOfContents]
+#endLevel   = 6
+#ordered    = false
+#startLevel = 1
