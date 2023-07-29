@@ -15,7 +15,7 @@ tags: ["north-bay"]
    [Chevron](https://goo.gl/maps/F3aGLG3vAwCmEkaK9) :fuel_pump:)*
 
 * HOW:
-  [route](https://www.gpsvisualizer.com/display/20230727215921-08062-map.html),
+  [route](map.html)
   [GPX](fort-ross.gpx)
 
 * Lunch in Guerneville at
@@ -28,8 +28,7 @@ or alternatively at the
 800 Strawberry Village Shopping Center *(not the one in Safeway)*
 
 {{< figure src="map.png" attr="interactive map"
-    link="https://www.gpsvisualizer.com/display/20230727215921-08062-map.html"
-    attrlink="https://www.gpsvisualizer.com/display/20230727215921-08062-map.html"
+    link="map.html" attrlink="map.html"
 >}}
 
 | Stop | Description          | Miles | Gas  | Time  | Notes
