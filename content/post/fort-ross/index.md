@@ -17,6 +17,7 @@ tags: ["north-bay"]
 * HOW:
   [route](map.html)
   [GPX](fort-ross.gpx)
+  [scenic](https://scenicapp.space/route/ByyIxbmz)
 
 * Lunch in Guerneville at
 [Pat’s International](https://goo.gl/maps/b1wHVau5ZGLLCUjY7) (:us: & :kr:)
