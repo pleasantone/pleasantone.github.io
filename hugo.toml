@@ -12,13 +12,14 @@ enableGitInfo = true
 enableEmoji = true
 
 [permalinks]
-  post = "/post/:year-:month-:day-:slug/"
+  posts = "/posts/:year-:month-:slug/"
+  events = "/events/:year-:month-:day-:slug/"
 
 [sitemap]
   changefreq = "hourly"
 
 [Params]
-mainSections = "post"
+mainSections = ["posts", "events"]
 subtitle = "GPS Route Library"
 
 #[markup.tableOfContents]
