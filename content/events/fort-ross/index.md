@@ -32,6 +32,7 @@ or alternatively at the
     link="map.html" attrlink="map.html"
 >}}
 
+{{<table "table table-striped table-bordered" >}}
 | Stop | Description          | Miles | Gas  | Time  | Notes
 | ---: | :----------          | ----: | :--: | ----: | :----
 |   01 | Peets Coffee         | 0     | G    |  8:45 | KSU 9:15 sharp
@@ -42,3 +43,13 @@ or alternatively at the
 |   06 | 76 Bodega Bay        | 140   | G    |  3:05 | Gas
 |   07 | Point Reyes Station  | 174   |      |  4:07 | Optional Break
 |   08 | Starbucks            | 206   |      |  5:19 |
+{{</table>}}
+
+     July 2023        
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+**30** 31                 
