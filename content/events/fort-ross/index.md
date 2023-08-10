@@ -6,33 +6,27 @@ publishDate: 2023-07-27
 description: North Bay, Gurneville, Fort Ross Road, Kruse Ranch Rd.
 tags: ["north-bay"]
 ---
-* WHEN: Sunday July 30th - meet 8:45 AM *KSU 9:15AM sharp*
-
-* WHERE: [Peets Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
+* **WHEN:** Sunday July 30th - meet 8:45 AM *KSU 9:15AM sharp*
+* **WHERE:** [Peets Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
    Northgate Mall, 5800 Northgate Dr. #146 San Rafael, CA
    *(top off at [76](https://goo.gl/maps/F1zv2PQTcjTju17X6),
    [Shell](https://goo.gl/maps/7iN9H6bbP4ePVyYt9)
    [Chevron](https://goo.gl/maps/F3aGLG3vAwCmEkaK9) :fuel_pump:)*
-
-* HOW:
+* **HOW:**
   [route](map.html)
   [GPX](fort-ross.gpx)
   [scenic](https://scenicapp.space/route/ByyIxbmz)
-
 * Lunch in Guerneville at
-[Pat’s International](https://goo.gl/maps/b1wHVau5ZGLLCUjY7) (:us: & :kr:)
-or alternatively at the
-[Gurneville Taco Truck](https://www.guernevilletacotruck.com) :taco: @ 76, or
-[La Bodeguita Mexican](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :burrito:
-
+  [Pat’s International](https://goo.gl/maps/b1wHVau5ZGLLCUjY7) (:us: & :kr:)
+  or alternatively at the
+  [Gurneville Taco Truck](https://www.guernevilletacotruck.com) :taco: @ 76, or
+  [La Bodeguita Mexican](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :burrito:
 * Ride ends at [Starbucks](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :coffee:,
-800 Strawberry Village Shopping Center *(not the one in Safeway)*
+  800 Strawberry Village Shopping Center *(not the one in Safeway)*
 
-{{< figure src="map.png" attr="interactive map"
-    link="map.html" attrlink="map.html"
->}}
+{{< figure src="map.png" attr="interactive map" link="map.html" attrlink="map.html" >}}
 
-{{<table "table table-striped table-bordered table-sm" >}}
+{{< table "table table-striped table-bordered table-sm" >}}
 | Stop |  Lat,Lon           | Description                    | Miles | Gas  | Time  | Notes
 | ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | :----
 |   00 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       | G    |  8:45 | KSU 9:15
@@ -43,6 +37,6 @@ or alternatively at the
 |   05 |  38.3292,-123.0436 | 76 Bodega Bay                  |       | G    |  3:05 | Gas Station
 |   06 |  38.0680,-122.8064 | Point Reyes Station            |       |      |  4:07 | Restroom (Optional)
 |   07 |  37.8979,-122.5150 | Starbucks Strawberry Village   |       |      |  5:19 | Restaurant
-{{</table>}}
+{{< /table >}}
 
 {{< jscalendar >}}
