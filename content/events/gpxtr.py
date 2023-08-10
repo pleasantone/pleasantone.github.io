@@ -1,42 +1,76 @@
-# TODO calculate miles and time properly (doesn't seem to be in GPX file information)
+"""
+gpxtr - create a markdown template from a Garmin GPX file for
+        route information
+"""
 
 import argparse
+from datetime import datetime
+
 import gpxpy
 import gpxpy.gpx
-from pprint import pprint
+from astral import LocationInfo
+from astral.sun import sun
 
-parser = argparse.ArgumentParser()
-parser.add_argument("input", help="input filename")
-parser.add_argument("-m", "--markdown", action="store_true",
-                    help="output markdown table")
-args = parser.parse_args()
+NAMESPACE = {
+    'trp': 'http://www.garmin.com/xmlschemas/TripExtensions/v1'
+}
 
-def shapingpoint(point):
-    for extension in point.extensions:
+OUTHDR = '| Stop |      Lat,Lon       | Description                    | Miles | Gas  | Time  | Layover | Notes'
+OUTSEP = '| ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | ------: | :----'
+OUTFMT = '|   {:02d} | {:-8.4f},{:8.4f} | {:30.30} |       | {:>4} | {:>5} | {:>7} | {}'
+
+
+def shaping_point(pt):
+    """ is a garmin route entry just a shaping point? """
+    for extension in pt.extensions:
         if 'ShapingPoint' in extension.tag:
             return True
     return False
 
-gpx_file = open(args.input, 'r')
-gpx = gpxpy.parse(gpx_file)
+def layover(pt):
+    """ layover time """
+    for extension in pt.extensions:
+        for duration in extension.findall('trp:StopDuration', NAMESPACE):
+            return(duration.text.replace('PT', '+').lower())
 
-outfmt = '{:02d} {:8.4f},{:8.4f}\t{:30.30}\t{}\t{}\t{}'
-if args.markdown:
-    outhdr = '| Stop |      Lat,Lon       | Description                    | Miles | Gas  | Time  | Notes'
-    outsep = '| ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | :----'
-    outfmt = '|   {:02d} | {:-8.4f},{:8.4f} | {:30.30} |       | {:4} | {:5} | {}'
+def departure_time(pt):
+    """ returns native datetime object for route points with departure times or None """
+    for extension in pt.extensions:
+        for departure in extension.findall('trp:DepartureTime', NAMESPACE):
+            return(datetime.fromisoformat(departure.text.replace('Z', '+00:00')))
 
-for route in gpx.routes:
-    print('{}\n{}'.format(outhdr, outsep))
-    stop = 1
+def start_point(rte):
+    """ what is the start location of the route, and what's the departure time """
+    for pt in rte.points:
+        return(pt.latitude, pt.longitude, departure_time(pt))
+
+def sun_rise_set(rte):
+    """ return sunrise/sunset info based upon the route startpoing """
+    lat, lon, startdate = start_point(rte)
+    start = LocationInfo("Start Point", "", "", lat, lon)
+    s = sun(start.observer, date=startdate)
+    return f'Sunrise: {s["sunrise"].astimezone():%H:%M}, Sunset: {s["sunset"].astimezone():%H:%M}'
+
+parser = argparse.ArgumentParser()
+parser.add_argument("input", help="input filename")
+args = parser.parse_args()
+
+with open(args.input, 'r', encoding='UTF-8') as file:
+    gpxdata = gpxpy.parse(file)
+
+for route in gpxdata.routes:
+    print('{}\n{}'.format(OUTHDR, OUTSEP))
+    stop = 0
     for point in route.points:
-        if not shapingpoint(point):
-            gas = 'G' if 'Gas Station' in point.symbol or stop == 1 else ''
-            print(outfmt.format(
+        if not shaping_point(point):
+            stop += 1
+            dt = departure_time(point)
+            print(OUTFMT.format(
                 stop,
                 point.latitude, point.longitude,
                 point.name,
-                gas,
-                point.time.strftime('%H:%M'),
+                'G' if 'Gas Station' in point.symbol or stop == 1 else '',
+                dt.astimezone().strftime('%H:%M') if dt else '',
+                layover(point) or '',
                 point.symbol))
-            stop = stop + 1
+    print("\n", sun_rise_set(route))
