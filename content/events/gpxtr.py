@@ -28,10 +28,10 @@ if args.markdown:
 
 for route in gpx.routes:
     print('{}\n{}'.format(outhdr, outsep))
-    stop = 0
+    stop = 1
     for point in route.points:
         if not shapingpoint(point):
-            gas = 'G' if 'Gas Station' in point.symbol or stop == 0 else ''
+            gas = 'G' if 'Gas Station' in point.symbol or stop == 1 else ''
             print(outfmt.format(
                 stop,
                 point.latitude, point.longitude,
