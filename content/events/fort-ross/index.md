@@ -32,7 +32,7 @@ or alternatively at the
     link="map.html" attrlink="map.html"
 >}}
 
-{{<table "table table-striped table-bordered" >}}
+{{<table "table table-striped table-bordered table-sm" >}}
 | Stop |  Lat,Lon           | Description                    | Miles | Gas  | Time  | Notes
 | ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | :----
 |   00 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       | G    |  8:45 | KSU 9:15
