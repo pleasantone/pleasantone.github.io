@@ -3,10 +3,10 @@ author: Paul Traina
 title: Fort Ross Road Ramble
 date: 2023-07-30
 publishDate: 2023-07-27
-description: North Bay, Gurneville, Fort Ross Road, Kruse Ranch Rd.
+description: Guerneville, Fort Ross Rd, Kruse Ranch Rd.
 tags: ["north-bay"]
 ---
-A twisty ride up to Gurneville and north featuring Fort Ross Road and Kruse Ranch Rd.
+A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranch Rd.
 *Expect up to 4 miles of well groomed dirt roads.*
 
 * **WHEN:** Sunday July 30th - meet 8:45 AM *KSU 9:15AM sharp*
@@ -18,7 +18,7 @@ A twisty ride up to Gurneville and north featuring Fort Ross Road and Kruse Ranc
 * Lunch in Guerneville at
   [Pat’s International](https://goo.gl/maps/b1wHVau5ZGLLCUjY7) (:us: & :kr:)
   or alternatively at the
-  [Gurneville Taco Truck](https://www.guernevilletacotruck.com) :taco: @ 76, or
+  [Guerneville Taco Truck](https://www.guernevilletacotruck.com) :taco: @ 76, or
   [La Bodeguita Mexican](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :burrito:
 * Ride ends at [Starbucks](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :coffee:,
   800 Strawberry Village Shopping Center *(not the one in Safeway)*
@@ -36,7 +36,7 @@ A twisty ride up to Gurneville and north featuring Fort Ross Road and Kruse Ranc
 |   01 |  38.0621,-122.6987 | Nicasio Square                 |       |      |  9:44 | Restroom
 |   02 |  38.5018,-123.0001 | 76 Gurneville                  |       | G    | 11:41 | Gas Station
 |   03 |  38.5022,-122.9983 | Pat's International            |       |      | 11:56 | Restaurant
-|   04 |  38.5352,-123.0871 | Willy's America                |       |      |  1:25 | Picture Break
+|   04 |  38.5352,-123.0871 | Willy's America                |       |      |  1:25 | Photo Break
 |   05 |  38.3292,-123.0436 | 76 Bodega Bay                  |       | G    |  3:05 | Gas Station
 |   06 |  38.0680,-122.8064 | Point Reyes Station            |       |      |  4:07 | Restroom (Optional)
 |   07 |  37.8979,-122.5150 | Starbucks Strawberry Village   |       |      |  5:19 | Restaurant
