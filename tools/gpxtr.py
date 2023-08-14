@@ -43,7 +43,7 @@ def format_long_length(length: float, miles: bool) -> str:
 def format_short_length(length: float, miles: bool) -> str:
     if miles:
         return f'{length * M_TO_FEET:.2f} ft'
-    return f'{length:.2f}m'
+    return f'{length:.2f} m'
 
 def format_speed(speed: float, miles: bool) -> str:
     if not speed:
@@ -53,7 +53,7 @@ def format_speed(speed: float, miles: bool) -> str:
     return f'{speed:.2f}m/s = {speed * 3600. / 1000.:.2f} km/h'
 
 def shaping_point(point) -> bool:
-    """ is a garmin route entry just a shaping point? """
+    """ is a route point just a shaping/Via point? """
     if not point.name:
         return True
     if point.name.startswith('Via '):
@@ -64,20 +64,20 @@ def shaping_point(point) -> bool:
     return False
 
 def layover(point) -> str:
-    """ layover time """
+    """ layover time at a given RoutePoint (Basecamp extension) """
     for extension in point.extensions:
         for duration in extension.findall('trp:StopDuration', NAMESPACE):
             return(duration.text.replace('PT', '+').lower())
     return ''
 
 def departure_time(point) -> Optional[datetime]:
-    """ returns native datetime object for route points with departure times or None """
+    """ returns datetime object for route point with departure times or None """
     for extension in point.extensions:
         for departure in extension.findall('trp:DepartureTime', NAMESPACE):
             return(datetime.fromisoformat(departure.text.replace('Z', '+00:00')))
 
 def start_point(route) -> tuple[float, float, Optional[datetime]]:
-    """ what is the start location of the route, and what's the departure time """
+    """ what is the start location of the route, and what's the departure time? """
     for point in route.points:
         return(point.latitude, point.longitude, departure_time(point))
     return (0.0, 0.0, None)
@@ -112,7 +112,7 @@ def main() -> None:
             print(OUT_FMT.format(
                 stop,
                 point.latitude, point.longitude,
-                point.name or '',
+                (point.name or '').replace('\n', ' '),
                 'G' if point.symbol and 'Gas Station' in point.symbol or stop == 1 else '',
                 '',
                 '',
@@ -132,7 +132,7 @@ def main() -> None:
                 print(OUT_FMT.format(
                     stop,
                     point.latitude, point.longitude,
-                    point.name,
+                    (point.name or '').replace('\n', ' '),
                     'G' if point.symbol and 'Gas Station' in point.symbol or stop == 1 else '',
                     departure.astimezone().strftime('%H:%M') if departure else '',
                     layover(point) or '',
