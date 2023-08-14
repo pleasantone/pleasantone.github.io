@@ -34,8 +34,8 @@ Sunrise: 06:11, Sunset: 20:21
 {{< table "table table-striped table-bordered table-sm" >}}
 | Stop |      Lat,Lon       | Description                    | Miles | Gas  | Time  | Layover | Notes
 | ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | ------: | :----
-|   01 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |     0 |    G | 09:15 |         | KSU 9:15
-|   02 |  38.0621,-122.6987 | Nicasio Square                 |    12 |      | 09:44 |    +15m | Restroom
+|   01 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |     0 |    G |  9:15 |         | KSU 9:15, meet 8:45
+|   02 |  38.0621,-122.6987 | Nicasio Square                 |    12 |      |  9:44 |    +15m | Restroom
 |   03 |  38.5022,-122.9983 | Pat's International            |    65 |      | 11:27 |     +1h | Restaurant
 |   04 |  38.5018,-123.0001 | 76 Guerneville                 |    65 |    G | 12:27 |    +15m | Gas Station
 |   05 |  38.5352,-123.0871 | Willy's America                | 13/78 |      |  1:05 |     +5m | Photo Break
