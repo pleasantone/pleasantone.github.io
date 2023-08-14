@@ -17,6 +17,7 @@ NAMESPACE = {
     'trp': 'http://www.garmin.com/xmlschemas/TripExtensions/v1'
 }
 
+# pylint: disable=line-too-long
 OUT_HDR = '| Stop |      Lat,Lon       | Description                    | Miles | Gas  | Time  | Layover | Notes'
 OUT_SEP = '| ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | ------: | :----'
 OUT_FMT = '|   {:02d} | {:-8.4f},{:8.4f} | {:30.30} |       | {:>4} | {:>5} | {:>7} | {}'
@@ -36,20 +37,20 @@ def format_time(time_s: float, seconds: bool) -> str:
 
 def format_long_length(length: float, miles: bool) -> str:
     if miles:
-        return f'{length / 1000. * KM_TO_MILES:.2f}miles'
-    return f'{length/ 1000.:.2f}km'
+        return f'{length / 1000. * KM_TO_MILES:.2f} mi'
+    return f'{length/ 1000.:.2f} km'
 
 def format_short_length(length: float, miles: bool) -> str:
     if miles:
-        return f'{length * M_TO_FEET:.2f}ft'
+        return f'{length * M_TO_FEET:.2f} ft'
     return f'{length:.2f}m'
 
 def format_speed(speed: float, miles: bool) -> str:
     if not speed:
         speed = 0
     if miles:
-        return f'{speed * KM_TO_MILES * 3600. / 1000.:.2f}mph'
-    return f'{speed:.2f}m/s = {speed * 3600. / 1000.:.2f}km/h'
+        return f'{speed * KM_TO_MILES * 3600. / 1000.:.2f} mph'
+    return f'{speed:.2f}m/s = {speed * 3600. / 1000.:.2f} km/h'
 
 def shaping_point(point) -> bool:
     """ is a garmin route entry just a shaping point? """
@@ -91,18 +92,37 @@ def sun_rise_set(route) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("-w", "--waypoints", help="create waypoint table as well", action='store_true')
     parser.add_argument("input", help="input filename")
     args = parser.parse_args()
 
     with open(args.input, 'r', encoding='UTF-8') as file:
         gpx = gpxpy.parse(file)
 
+    if gpx.name:
+        print(f'# {gpx.name}')
+    if gpx.creator:
+        print(f'## {gpx.creator}')
+
+    if args.waypoints:
+        stop = 0
+        print(f'\n{OUT_HDR}\n{OUT_SEP}')
+        for point in gpx.waypoints:
+            stop += 1
+            print(OUT_FMT.format(
+                stop,
+                point.latitude, point.longitude,
+                point.name or '',
+                'G' if point.symbol and 'Gas Station' in point.symbol or stop == 1 else '',
+                '',
+                '',
+                point.symbol or ''))
+
     for route in gpx.routes:
         if route.name:
-            print(f'# {route.name}')
+            print(f'## {route.name}')
         if route.description:
-            print(f'## {route.description}')
-        print(f'- {sun_rise_set(route)}')
+            print(f'### {route.description}')
         print(f'\n{OUT_HDR}\n{OUT_SEP}')
         stop = 0
         for point in route.points:
@@ -117,11 +137,12 @@ def main() -> None:
                     departure.astimezone().strftime('%H:%M') if departure else '',
                     layover(point) or '',
                     point.symbol or ''))
+        print(f'\n- {sun_rise_set(route)}')
 
-    print()
     move_data = gpx.get_moving_data()
     if move_data and move_data.moving_time:
-        print(f'- Total time: {format_time(move_data.moving_time, False)}')
-    print(f'- Total length: {format_long_length(gpx.length_2d(), True)}')
+        print(f'- Total moving time: {format_time(move_data.moving_time, False)}')
+    print(f'- Total distance: {format_long_length(gpx.length_2d(), True)}')
 
-main()
+if __name__ == '__main__':
+    main()
