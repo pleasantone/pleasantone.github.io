@@ -53,6 +53,8 @@ def format_speed(speed: float, miles: bool) -> str:
 
 def shaping_point(point) -> bool:
     """ is a garmin route entry just a shaping point? """
+    if not point.name:
+        return True
     if point.name.startswith('Via '):
         return True
     for extension in point.extensions:
@@ -84,7 +86,7 @@ def sun_rise_set(route) -> str:
     lat, lon, start_date = start_point(route)
     start = astral.LocationInfo("Start Point", "", "", lat, lon)
     sun = astral.sun.sun(start.observer, date=start_date)
-    return (f'Sunrise: {sun["sunrise"].astimezone():%H:%M},'
+    return (f'Sunrise: {sun["sunrise"].astimezone():%H:%M}, '
             f'Sunset: {sun["sunset"].astimezone():%H:%M}')
 
 def main() -> None:
@@ -114,7 +116,7 @@ def main() -> None:
                     'G' if point.symbol and 'Gas Station' in point.symbol or stop == 1 else '',
                     departure.astimezone().strftime('%H:%M') if departure else '',
                     layover(point) or '',
-                    point.symbol))
+                    point.symbol or ''))
 
     print()
     move_data = gpx.get_moving_data()
