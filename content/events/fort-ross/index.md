@@ -29,17 +29,18 @@ A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranc
 
 {{< figure src="map.png" attr="interactive map" link="map.html" attrlink="map.html" >}}
 
-Sunrise: 06:11, Sunset: 20:21
-
-{{< table "table table-striped table-bordered table-sm" >}}
-| Stop |      Lat,Lon       | Description                    | Miles | Gas  | Time  | Layover | Notes
-| ---: | :----------------: | :----------------------------- | ----: | :--: | ----: | ------: | :----
-|   01 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |     0 |    G |  9:15 |         | KSU 9:15, meet 8:45
-|   02 |  38.0621,-122.6987 | Nicasio Square                 |    12 |      |  9:44 |    +15m | Restroom
-|   03 |  38.5022,-122.9983 | Pat's International            |    65 |      | 11:27 |     +1h | Restaurant
-|   04 |  38.5018,-123.0001 | 76 Guerneville                 |    65 |    G | 12:27 |    +15m | Gas Station
-|   05 |  38.5352,-123.0871 | Willy's America                | 13/78 |      |  1:05 |     +5m | Photo Break
-|   06 |  38.3292,-123.0436 | 76 Bodega Bay                  |67/132 |    G |  3:06 |    +15m | Gas Station
-|   07 |  38.0680,-122.8064 | Point Reyes Station            |33/165 |      |  4:07 |     +5m | Restroom (optional)
-|   08 |  37.8979,-122.5150 | Starbucks Strawberry Village   |64/196 |      |  5:18 |         | Restaurant
+{{< table "table table-striped table-bordered table-sm w-auto" >}}
+|      Lat,Lon       | Name                           |   Dist. | G |  ETA  | Notes
+| :----------------: | :----------------------------- | ------: | - | ----: | :----
+|  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       0 | G |  9:15 | Restaurant
+|  38.0621,-122.6987 | Nicasio Square                 |      12 |   |  9:44 | Restroom (+15m)
+|  38.5022,-122.9983 | Pat's International            |      65 |   | 11:27 | Restaurant (+1h)
+|  38.5018,-123.0001 | 76 Gurneville                  |   65/65 | G | 12:27 | Gas Station (+15m)
+|  38.5352,-123.0871 | Willy's America                |      79 |   |  1:05 | Truck (+5m)
+|  38.3292,-123.0436 | 76 Bodega Bay                  |  67/132 | G |  3:06 | Gas Station (+15m)
+|  38.0680,-122.8064 | Point Reyes Station            |     165 |   |  4:07 | Restroom (+5m)
+|  37.8979,-122.5150 | Starbucks Strawberry Village   |     195 |   |  5:18 | Restaurant
 {{< /table >}}
+
+- Sunrise: 06:11, Sunset: 20:21
+- Total distance: 195.52 mi
