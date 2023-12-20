@@ -1,0 +1,17 @@
+<div class="remote-map">
+{{ $width := default 600 (.Get `width`) }}
+{{ $height := default 600 (.Get `height`) }}
+{{ $options := default `&tl=1&wl=0&sb=0&bg=m&bgo=1&az=1` (.Get `options`) }}
+{{ $gpx := .Get `gpx` }}
+{{ with $gpx }}
+    {{ with $.Page.Resources.Get . }}
+        <iframe width="{{ $width }}" height="{{ $height }}"
+                src="https://gpsvisualizer.com/atlas/map?tl=1&wl=0&sb=0&bg=m&bgo=1&az=1&url={{ .Permalink }}">
+        </iframe>
+    {{ else }}
+        {{ errorf "%s: %q shortcode: unable to get GPX resource" $.Position $.Name }}
+    {{ end }}
+{{ else }}
+  {{ errorf "%s: %q shortcode: no GPX file specified" .Position .Name }}
+{{ end }}
+</div>

@@ -1,8 +1,8 @@
-baseURL = "https://pst.org"
-theme   = "sk1"
-title   = "Paul's Route Notes"
+baseURL = "https://rides.pst.org"
+theme = "tailwind"
+title = "Paul's Route Notes"
 author = "Paul Traina"
-copyright = "Copyright © 2023, Paul Traina; all rights reserved."
+copyright = "Paul Traina; All rights reserved."
 # paginate = 3
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -18,11 +18,41 @@ enableEmoji = true
 [sitemap]
   changefreq = "hourly"
 
-[Params]
-mainSections = ["posts", "events"]
-subtitle = "GPS Route Library"
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 #[markup.tableOfContents]
-#endLevel   = 6
-#ordered    = false
-#startLevel = 1
+#  endLevel   = 6
+#  ordered    = false
+#  startLevel = 1
+
+[params]
+  subtitle = "Motorcycle Ride Events and Route Library"
+  keywords = "goat trails junkies, motorcycle rides, motorcycle events"
+
+# sk1
+  mainSections = ["posts", "events"]
+
+# tailwind
+  contentTypeName = "events"
+  toc = false
+  showReadingTime = false
+  DateFormatList = "Mon Jan _2 15:04:05 MST 2006"
+
+  [params.footer]
+    since = 2023
+    poweredby = false
+
+#[menu]
+#  [[menu.main]]
+#    identifier = "event"
+#    name = "Events"
+#    pageRef = "/events"
+#    weight = 10
+#
+#[  [menu.main]]
+#    identifier = "about"
+#    name = "About"
+#    pageRef = "/about"
+#    weight = 0

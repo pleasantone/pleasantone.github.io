@@ -1,15 +1,12 @@
 ---
 author: Paul Traina
 title: Fort Ross Road Ramble
-date: 2023-07-30
+date: 2023-07-30T08:45:00-07:00
 publishDate: 2023-07-27
-description: Guerneville, Fort Ross Rd, Kruse Ranch Rd.
+description: A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
 tags: ["north-bay"]
 ---
-A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranch Rd.
-*Expect up to 4 miles of well groomed dirt roads.*
-
-* **WHEN:** Sunday July 30th - meet 8:45 AM *KSU 9:15AM sharp*
+* **WHEN:** Meet 8:45 AM *KSU 9:15AM sharp*
 * **WHERE:** [Peets Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
    Northgate Mall, 5800 Northgate Dr. #146 San Rafael, CA
    *(top off at [76](https://goo.gl/maps/F1zv2PQTcjTju17X6),
@@ -25,11 +22,11 @@ A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranc
 * **HOW:**
   [route](map.html)
   [GPX](fort-ross.gpx)
-  [scenic](https://scenicapp.space/route/ByyIxbmz)
+  [Scenic](https://scenicapp.space/route/ByyIxbmz)
 
-{{< figure src="map.png" attr="interactive map" link="map.html" attrlink="map.html" >}}
+{{< iframemap gpx="fort-ross.gpx" >}}
 
-{{< table "table table-striped table-bordered table-sm w-auto" >}}
+{{< table "relative overflow-x-auto" >}}
 |      Lat,Lon       | Name                           |   Dist. | G |  ETA  | Notes
 | :----------------: | :----------------------------- | ------: | - | ----: | :----
 |  38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       0 | G |  9:15 | Restaurant
@@ -42,5 +39,5 @@ A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranc
 |  37.8979,-122.5150 | Starbucks Strawberry Village   |     195 |   |  5:18 | Restaurant
 {{< /table >}}
 
-- Sunrise: 06:11, Sunset: 20:21
-- Total distance: 195.52 mi
+* Sunrise: 06:11, Sunset: 20:21
+* Total distance: 195.52 mi
