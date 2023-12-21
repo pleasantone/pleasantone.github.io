@@ -3,12 +3,15 @@ author: Paul Traina
 title: Fort Ross Road Ramble
 date: 2023-07-30T08:45:00-07:00
 publishDate: 2023-07-27
-description: A twisty ride up to Guerneville and north featuring Fort Ross Rd.
-  and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
 tags:
   - north-bay
+gpxfile: fort-ross.gpx
 ---
-* **WHEN:** Meet 8:45 AM *KSU 9:15AM sharp*
+A twisty ride up to Guerneville and north featuring Fort Ross Rd.
+and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
+<!--more-->
+
+* **WHEN:** Meet 8:45 AM **(KSU 9:15AM sharp)**
 * **WHERE:** [Peet's Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
    Northgate Mall, 5800 Northgate Dr. #146 San Rafael, CA
    *(top off at [76](https://goo.gl/maps/F1zv2PQTcjTju17X6),
@@ -22,23 +25,21 @@ tags:
 * Ride ends at [Starbucks](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :coffee:,
   800 Strawberry Village Shopping Center *(not the one in Safeway)*
 * **HOW:**
-  [GPX](fort-ross.gpx)
+  [GPX]({{< gpxref >}})
   [Scenic](https://scenicapp.space/route/ByyIxbmz)
-* Total distance: 195.52 mi
 
-{{< iframemap gpx="fort-ross.gpx" >}}
+{{< gpxmap >}}
 
-{{< table "relative" >}}
-|        Lat,Lon       | Name                           |   Dist. | G |  ETA  | Notes
-| :------------------: | :----------------------------- | ------: | - | ----: | :----
-|    38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       0 |   | 09:15 | Restaurant
-|    38.0621,-122.6987 | Nicasio Square                 |      12 |   | 09:39 | Restroom (+0:15)
-|    38.5022,-122.9983 | Pat's International            |      65 | L | 11:41 | Restaurant (+1:00)
-|    38.5018,-123.0001 | 76 Guerneville                 |   65/65 | G | 12:41 | Gas Station (+0:15)
-|    38.5352,-123.0871 | Willy's America                |      79 |   | 13:23 | Truck (+0:05)
-|    38.3292,-123.0436 | 76 Bodega Bay                  |  67/132 | G | 15:14 | Gas Station (+0:15)
-|    38.0680,-122.8064 | Point Reyes Station            |     165 |   | 16:36 | Restroom (+0:05)
-|    37.8979,-122.5150 | Starbucks Strawberry Village   |  63/195 |   | 17:41 | Restaurant
-{{< /table >}}
+| Name                           |   Dist. | G |  ETA  | Notes
+| :----------------------------- | ------: | - | ----: | :----
+| Peet's Coffee Northgate Mall   |       0 |   | 09:15 | Restaurant
+| Nicasio Square                 |      12 |   | 09:39 | Restroom (+0:15)
+| Pat's International            |      65 | L | 11:41 | Restaurant (+1:00)
+| 76 Guerneville                 |   65/65 | G | 12:41 | Gas Station (+0:15)
+| Willy's America                |      79 |   | 13:23 | Truck (+0:05)
+| 76 Bodega Bay                  |  67/132 | G | 15:14 | Gas Station (+0:15)
+| Point Reyes Station            |     165 |   | 16:36 | Restroom (+0:05)
+| Starbucks Strawberry Village   |  63/195 |   | 17:41 | Restaurant
 
 * 07/30/23: Sunrise: 06:11, Starts: 09:15, Ends: 17:41, Sunset: 20:20
+* Total distance: 195.52 mi

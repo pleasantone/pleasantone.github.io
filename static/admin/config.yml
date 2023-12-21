@@ -33,8 +33,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime"}
       - {label: "Publish Date", name: "publishDate", widget: "datetime", hint: "When to start showing article"}
-      - {label: "Description", name: "description", widget: "string", hint: "Short summary of the article for content pages"}
-      - {label: "Region", name: "tags", widget: "list", hint: "Region where event is occurring e.g. *north-bay*"}
+      - {label: "Region", name: "tags", widget: "list", hint: "Region(s) where event is occurring e.g. north-bay"}
+      - {lable: "GPX file", name: "gpxfile", widget: "file" }
 #      - {label: "Categories", name: "categories", widget: "list", allow_add: false, collapsed: true, default: ["investments", "grants"]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "news" # Used in routes, e.g., /admin/collections/blog
@@ -48,7 +48,6 @@ collections:
       - {label: "Author", name: "author", widget: "string", default: "Paul Traina"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "string", hint: "Short summary of the article for content pages"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list", allow_add: false, collapsed: true}
       - {label: "Body", name: "body", widget: "markdown"}
