@@ -5,7 +5,7 @@ date: 2023-07-30T08:45:00-07:00
 publishDate: 2023-07-27
 tags:
   - north-bay
-gpxfile: fort-ross.gpx
+gpxfile: twixtmas.gpx
 ---
 A twisty ride up to Guerneville and north featuring Fort Ross Rd.
 and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
