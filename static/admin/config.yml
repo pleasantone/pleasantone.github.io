@@ -13,7 +13,8 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 display_url: https://rides.pst.org
-# logo_url: /images/motorcycle.png
+logo_url: /images/motorcycle.png
+
 slug:
   encoding: "ascii"
   clean_accents: true
