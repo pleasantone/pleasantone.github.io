@@ -1,4 +1,4 @@
-{{- $width := default 600 (.Get `width`) }}
+{{- $width := default "100%" (.Get `width`) }}
 {{- $height := default 600 (.Get `height`) }}
 {{- $class := default "interactive-map" (.Get `class`)}}
 {{- $gpx := .Get `gpx` }}
@@ -6,9 +6,9 @@
     {{- with $.Page.Resources.Get . }}
 <figure class="{{ $class }}">
     <iframe width="{{ $width }}" height="{{ $height }}"
-            src="https://gpsvisualizer.com/atlas/map?tl=1&wl=0&sb=0&bg=m&bgo=1&az=1&url={{ .Permalink }}">
+            src="https://gpsvisualizer.com/atlas/map?cc=0&mc=0&wl=0&url={{ .Permalink }}">
     </iframe>
-    <figcaption><a target="_blank" href="https://gpsvisualizer.com/atlas/map?tl=1&wl=0&sb=0&bg=m&bgo=1&az=1&url={{ .Permalink }}">Interactive Map</a></figcaption>
+    <figcaption><a target="_blank" href="https://gpsvisualizer.com/atlas/map?url={{ .Permalink }}">Interactive Map</a></figcaption>
 </figure>
     {{- else }}
         {{ errorf "%s: %q shortcode: unable to get GPX resource" $.Position $.Name }}
