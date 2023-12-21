@@ -1,7 +1,7 @@
 {{- $width := default "100%" (.Get `width`) }}
 {{- $height := default 600 (.Get `height`) }}
 {{- $class := default "interactive-map" (.Get `class`)}}
-{{- $gpx := .Get `gpx` }}
+{{- $gpx := default ($.Page.Params.gpxfile) (.Get `gpx`) }}
 {{- with $gpx }}
     {{- with $.Page.Resources.Get . }}
 <figure class="{{ $class }}">

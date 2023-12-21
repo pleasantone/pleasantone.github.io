@@ -1,0 +1,10 @@
+{{- $gpx := default ($.Page.Params.gpxfile) (.Get `gpx`) }}
+{{- with $gpx }}
+    {{- with $.Page.Resources.Get . }}
+        {{- .Permalink }}
+    {{- else }}
+        {{ errorf "%s: %q shortcode: unable to get GPX resource" $.Position $.Name }}
+    {{- end }}
+{{- else }}
+  {{- errorf "%s: %q shortcode: no GPX file specified" .Position .Name }}
+{{- end }}
