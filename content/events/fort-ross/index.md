@@ -3,8 +3,10 @@ author: Paul Traina
 title: Fort Ross Road Ramble
 date: 2023-07-30T08:45:00-07:00
 publishDate: 2023-07-27
-description: A twisty ride up to Guerneville and north featuring Fort Ross Rd. and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
-tags: ["north-bay"]
+description: A twisty ride up to Guerneville and north featuring Fort Ross Rd.
+  and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
+tags:
+  - north-bay
 ---
 * **WHEN:** Meet 8:45 AM *KSU 9:15AM sharp*
 * **WHERE:** [Peet's Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
@@ -26,7 +28,7 @@ tags: ["north-bay"]
 
 {{< iframemap gpx="fort-ross.gpx" >}}
 
-{{< table "relative overflow-x-auto" >}}
+{{< table "relative" >}}
 |        Lat,Lon       | Name                           |   Dist. | G |  ETA  | Notes
 | :------------------: | :----------------------------- | ------: | - | ----: | :----
 |    38.0045,-122.5447 | Peet's Coffee Northgate Mall   |       0 |   | 09:15 | Restaurant
