@@ -20,7 +20,6 @@ tags: ["north-bay"]
 * Ride ends at [Starbucks](https://goo.gl/maps/BrJcXxdC16p3T3iB7) :coffee:,
   800 Strawberry Village Shopping Center *(not the one in Safeway)*
 * **HOW:**
-  [route](map.html)
   [GPX](fort-ross.gpx)
   [Scenic](https://scenicapp.space/route/ByyIxbmz)
 
