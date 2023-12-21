@@ -31,14 +31,14 @@ enableEmoji = true
   subtitle = "Motorcycle Ride Events and Route Library"
   keywords = "goat trails junkies, motorcycle rides, motorcycle events"
 
-# sk1
-  mainSections = ["posts", "events"]
-
 # tailwind
   contentTypeName = "events"
   toc = false
   showReadingTime = false
   DateFormatList = "Mon Jan _2 15:04:05 MST 2006"
+
+  [params.header]
+    logo = "images/motorcycle.png"
 
   [params.footer]
     since = 2023
