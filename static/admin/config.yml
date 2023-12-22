@@ -12,13 +12,12 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
-display_url: https://rides.pst.org
+site_url: https://rides.pst.org
 logo_url: /images/motorcycle.png
 
 slug:
   encoding: "ascii"
   clean_accents: true
-  sanitize_replacement: "_"
 
 collections:
   - name: "events"
@@ -29,14 +28,18 @@ collections:
     public_folder: ""
     create: true
     fields:
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Author", name: "author", widget: "string", default: "Paul Traina"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime"}
       - {label: "Publish Date", name: "publishDate", widget: "datetime", hint: "When to start showing article"}
       - {label: "Region", name: "tags", widget: "list", hint: "Region(s) where event is occurring e.g. north-bay"}
-      - {lable: "GPX file", name: "gpxfile", widget: "file" }
 #      - {label: "Categories", name: "categories", widget: "list", allow_add: false, collapsed: true, default: ["investments", "grants"]}
+      - {lable: "GPX file", name: "gpxfile", widget: "file" }
+      - {label: "Images", name: "images", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+
   - name: "news" # Used in routes, e.g., /admin/collections/blog
     label: "News" # Used in the UI
     folder: "content/news" # The path to the folder where the documents are stored
@@ -45,9 +48,11 @@ collections:
     public_folder: ""
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Author", name: "author", widget: "string", default: "Paul Traina"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list", allow_add: false, collapsed: true}
+      - {label: "Images", name: "images", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

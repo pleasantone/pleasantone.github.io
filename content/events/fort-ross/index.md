@@ -8,10 +8,14 @@ tags:
 gpxfile: fort-ross.gpx
 ---
 A twisty ride up to Guerneville and north featuring Fort Ross Rd.
-and Kruse Ranch Rd. *Expect up to 4 miles of well groomed dirt roads.*
+and Kruse Ranch Rd.
+
+*Expect up to 4 miles of well groomed dirt roads.*
 <!--more-->
 
-* **WHEN:** Meet 8:45 AM **(KSU 9:15AM sharp)**
+{{< figure src="fort-ross.jpg" >}}
+
+* **WHEN:** Meet 8:45 AM **(KSU 9:15AM sharp!)**
 * **WHERE:** [Peet's Coffee](https://goo.gl/maps/Nr19wF2eEhyFY9L28),
    Northgate Mall, 5800 Northgate Dr. #146 San Rafael, CA
    *(top off at [76](https://goo.gl/maps/F1zv2PQTcjTju17X6),

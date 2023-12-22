@@ -10,6 +10,7 @@ cleanDestinationDir = true
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
+sectionPagesMenu = "main"
 
 [permalinks]
   posts = "/posts/:year-:month-:slug/"
@@ -31,28 +32,18 @@ enableEmoji = true
   subtitle = "Motorcycle Ride Events and Route Library"
   keywords = "goat trails junkies, motorcycle rides, motorcycle events"
 
-# tailwind
+# tailwind specific configuration
   contentTypeName = "events"
   toc = false
   showReadingTime = false
-  DateFormatList = "Mon Jan _2 15:04:05 MST 2006"
-
+  DateFormatList = "Mon Jan _2 3:04 pm MST 2006"
   [params.header]
     logo = "images/motorcycle.png"
-
   [params.footer]
     since = 2023
     poweredby = false
 
-#[menu]
-#  [[menu.main]]
-#    identifier = "event"
-#    name = "Events"
-#    pageRef = "/events"
-#    weight = 10
-#
-#[  [menu.main]]
-#    identifier = "about"
-#    name = "About"
-#    pageRef = "/about"
-#    weight = 0
+[menus]
+  [[menus.main]]
+    name = "Test URL"
+    URL = "https://example.com"
