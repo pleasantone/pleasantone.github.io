@@ -1,5 +1,5 @@
 baseURL = "https://rides.pst.org"
-theme = "tailwind"
+theme = ["github.com/tomowang/hugo-theme-tailwind"]
 title = "Paul's Route Notes"
 author = "Paul Traina"
 copyright = "Paul Traina; All rights reserved."
